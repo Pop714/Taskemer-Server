@@ -1,6 +1,6 @@
 package net.pop.taskemerserver.data.repos;
 
-import net.pop.taskemerserver.data.model.User;
+import net.pop.taskemerserver.data.model.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

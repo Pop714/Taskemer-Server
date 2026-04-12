@@ -1,9 +1,10 @@
-package net.pop.taskemerserver.data.model;
+package net.pop.taskemerserver.data.model.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import net.pop.taskemerserver.data.model.enums.AttachmentType;
 
 @Entity
 @Table(name = "attachments")

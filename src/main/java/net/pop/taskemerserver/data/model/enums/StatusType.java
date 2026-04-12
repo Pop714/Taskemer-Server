@@ -1,4 +1,4 @@
-package net.pop.taskemerserver.data.model;
+package net.pop.taskemerserver.data.model.enums;
 
 public enum StatusType {
     ON_GOING,

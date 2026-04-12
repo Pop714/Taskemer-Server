@@ -1,4 +1,4 @@
-package net.pop.taskemerserver.data.model;
+package net.pop.taskemerserver.data.model.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

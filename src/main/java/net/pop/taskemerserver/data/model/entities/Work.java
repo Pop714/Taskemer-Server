@@ -1,50 +1,35 @@
-package net.pop.taskemerserver.data.model;
+package net.pop.taskemerserver.data.model.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
-
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "tasks")
+@Table(name = "works")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Task {
+public class Work {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;
-
-    @Column(nullable = false)
-    private String title;
+    @JoinColumn(name = "task_id", nullable = false)
+    private Task task;
 
     @Column(columnDefinition = "TEXT")
     private String description;
 
-    @Column(nullable = false)
-    @Enumerated(EnumType.STRING)
-    private PriorityType priority;
-
-    @Column(nullable = false)
-    @Enumerated(EnumType.STRING)
-    private StatusType status;
+    @Column(name = "voice_path")
+    private String voicePath;
 
     @CreationTimestamp
     @Column(name = "created_at")
     private LocalDateTime createdAt;
-
-    @Column(name = "ended_in")
-    private LocalDateTime endedIn;
-
-    @Column(name = "deadline")
-    private LocalDateTime deadline;
 
 }

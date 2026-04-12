@@ -2,7 +2,7 @@ package net.pop.taskemerserver.service;
 
 import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
-import net.pop.taskemerserver.data.model.User;
+import net.pop.taskemerserver.data.model.entities.User;
 import net.pop.taskemerserver.data.repos.UserRepo;
 import net.pop.taskemerserver.security.SecurityConfig;
 import org.springframework.beans.factory.annotation.Autowired;

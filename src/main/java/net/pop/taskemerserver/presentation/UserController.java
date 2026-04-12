@@ -2,7 +2,7 @@ package net.pop.taskemerserver.presentation;
 
 import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
-import net.pop.taskemerserver.data.model.User;
+import net.pop.taskemerserver.data.model.entities.User;
 import net.pop.taskemerserver.service.UserService;
 import net.pop.taskemerserver.utils.ApiResponse;
 import net.pop.taskemerserver.utils.UserResponse;

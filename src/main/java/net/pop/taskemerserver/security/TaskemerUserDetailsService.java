@@ -1,7 +1,7 @@
 package net.pop.taskemerserver.security;
 
 import lombok.NonNull;
-import net.pop.taskemerserver.data.model.User;
+import net.pop.taskemerserver.data.model.entities.User;
 import net.pop.taskemerserver.data.repos.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
