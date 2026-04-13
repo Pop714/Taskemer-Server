@@ -3,6 +3,7 @@ package net.pop.taskemerserver.presentation;
 import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
 import net.pop.taskemerserver.data.model.entities.Attachment;
+import net.pop.taskemerserver.data.model.responses.AttachmentResponse;
 import net.pop.taskemerserver.service.AttachmentService;
 import net.pop.taskemerserver.utils.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,7 @@ public class AttachmentController {
     @PostMapping
     public ResponseEntity<ApiResponse<?>> createAttachment(@RequestBody Attachment attachment) {
         try {
-            Attachment addedAttachment = attachmentService.addAttachment(attachment);
+            AttachmentResponse addedAttachment = attachmentService.addAttachment(attachment);
             return ResponseEntity.ok(new ApiResponse<>(
                     "Success",
                     200,

@@ -3,6 +3,7 @@ package net.pop.taskemerserver.presentation;
 import jakarta.persistence.EntityExistsException;
 import jakarta.persistence.EntityNotFoundException;
 import net.pop.taskemerserver.data.model.entities.Work;
+import net.pop.taskemerserver.data.model.responses.WorkResponse;
 import net.pop.taskemerserver.service.WorkService;
 import net.pop.taskemerserver.utils.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,7 @@ public class WorkController {
     @PostMapping
     public ResponseEntity<ApiResponse<?>> createWork(@RequestBody Work work) {
         try {
-            Work addedWork = workService.addWork(work);
+            WorkResponse addedWork = workService.addWork(work);
             return ResponseEntity.ok(new ApiResponse<>(
                     "Success",
                     200,
