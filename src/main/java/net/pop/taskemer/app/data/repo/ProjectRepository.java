@@ -1,0 +1,9 @@
+package net.pop.taskemer.app.data.repo;
+
+import net.pop.taskemer.app.data.model.entities.Project;
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
+
+public interface ProjectRepository extends JpaRepository<Project, Long> {
+    List<Project> findByUserId(Integer userId);
+}
